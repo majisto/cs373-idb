@@ -1,0 +1,1 @@
+select Nname, Count(*)c from Ncards group by Nname HAVING c > 1;
