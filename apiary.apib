@@ -4,41 +4,139 @@ FORMAT: 1A
 MTG API is a database of Magic The Gathering TCG
 
 
-## Notes Collection [/notes]
-### List all Notes [GET]
+
+## Card Collection [/cards]
+
+### List all Cards [GET]
 + Response 200 (application/json)
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
 
-### Create a Note [POST]
+### Create a Card [POST]
 + Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
 
-## Note [/notes/{id}]
-A single Note object with all its details
 
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
 
-### Retrieve a Note [GET]
+## Card [/cards/{id}]
+A single Card object with all its details
+
+### Retrieve a Card [GET]
 + Response 200 (application/json)
 
-    + Header
+    {
+        "card_ID" : 370618
+        "card_name" : "Act of Treason",
+        "card_setID" : "M14"
+        "card_type" : "Sorcery",
+        "card_subtype" : "",
+        "card_mana_cost" : {2}{R}
+        "card_converted_cost" : 3,
+        "card_loyalty" : 
+        "card_rarity" : "C",
+        "card_text" : "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. #_(It can attack and {T} this turn.)",
+        "card_flavor_text" : ""Rage courses in every heart, yearning to betray its rational prison."—Sarkhan Vol",
+        "card_power" :
+        "card_toughness" :
+        "card_price" :
 
-            X-My-Header: The Value
+    }
 
-    + Body
+### Remove a Card [DELETE]
++ Response 204
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+### Edit a Card [PUT]
++ Request (application/json)
 
-### Remove a Note [DELETE]
++ Response 204
+
+
+
+
+
+## Set Collection [/sets]
+
+### List all Sets [GET]
++ Response 200 (application/json)
+
+
+### Create a Set [POST]
++ Request (application/json)
+
++ Response 201 (application/json)
+
+
+## Set [/cards/{id}]
+A single Card object with all its details
+
+### Retrieve a Set [GET]
++ Response 200 (application/json)
+
+### Remove a Set [DELETE]
++ Response 204
+
+### Edit a Set [PUT]
++ Request (application/json)
+
++ Response 204
+
+
+
+
+
+
+## Type Collection [/types]
+
+### List all Types [GET]
++ Response 200 (application/json)
+
+
+### Create a Type [POST]
++ Request (application/json)
+
++ Response 201 (application/json)
+
+
+## Type [/types/{id}]
+A single Type object with all its details
+
+### Retrieve a Type [GET]
++ Response 200 (application/json)
+
+### Remove a Type [DELETE]
++ Response 204
+
+### Edit a Type [PUT]
++ Request (application/json)
+
++ Response 204
+
+
+
+
+## Subtype Collection [/subtypes]
+
+### List all Subtypes [GET]
++ Response 200 (application/json)
+
+
+### Create a Subtype [POST]
++ Request (application/json)
+
++ Response 201 (application/json)
+
+
+## Subtype [/subtypes/{id}]
+A single Subtype object with all its details
+
+### Retrieve a Subtype [GET]
++ Response 200 (application/json)
+
+### Remove a Subtype [DELETE]
++ Response 204
+
+### Edit a Subtype [PUT]
++ Request (application/json)
+
 + Response 204
