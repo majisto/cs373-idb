@@ -7,14 +7,14 @@ types = set()
 subtypes = set()
 types_list = []
 
-with open("/u/rbrooks/cs373/type_names.txt", "r") as f:
+with open("/u/rbrooks/cs373/ass3_idb/cs373-idb/SQL_Dir/Types_Subtypes/type_names.txt", "r") as f:
 	for type_name_string in f :
 		temp = type_name_string.rstrip(' \n').lstrip(' ')
 		typeList = temp.split(" — ")
 
 		card_type = typeList[0]
 		card_subtype = ''
-		if len(typeList) > 1 :
+		if len(typeList) > 1:
 			card_subtype = typeList[1]
 			subtypes.add(card_subtype)
 
@@ -29,10 +29,12 @@ print(str(len(subtypes)))
 print("\n\n\n\n\n")
 """
 
+print(subtypes)
 
+"""
 for a in types:
 	print(a, end = ",\n")
-
+"""
 
 
 """
