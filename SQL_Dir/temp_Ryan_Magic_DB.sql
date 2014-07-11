@@ -1,5 +1,12 @@
 drop table IF EXISTS MagicSet, MagicType, MagicSubtype, MagicSub_JoinType, MagicCard;
 
+
+/*-------------------------------------------------------------------.
+|--------------------------------------------------------------------|
+|                                                                    |
+|                          MagicSet Table                            |
+|                                                                    |
+`-------------------------------------------------------------------*/
 CREATE TABLE MagicSet(
 set_id varchar(8),
 set_name varchar(255),
@@ -7,19 +14,82 @@ set_symbol varchar (255),
 set_release_date date
 );
 
+ALTER TABLE MagicSet 
+	ADD CONSTRAINT MagicSet_pk
+	PRIMARY KEY (set_id);
+
+
+/*-------------------------------------------------------------------.
+|--------------------------------------------------------------------|
+|                                                                    |
+|                          MagicType Table                           |
+|                                                                    |
+`-------------------------------------------------------------------*/
+
+
 CREATE TABLE MagicType(
 type_name varchar(255),
 type_description text
 );
 
+ALTER TABLE MagicType 
+	ADD CONSTRAINT MagicType_pk
+	PRIMARY KEY (type_name);
+
+
+
+/*-------------------------------------------------------------------.
+|--------------------------------------------------------------------|
+|                                                                    |
+|                        MagicSubtype Table                          |
+|                                                                    |
+`-------------------------------------------------------------------*/
+
+
 CREATE TABLE MagicSubtype(
 subtype_name varchar(255)
 );
+
+ALTER TABLE MagicSubtype 
+	ADD CONSTRAINT MagicSubtype_pk
+	PRIMARY KEY (subtype_name);
+
+
+/*-------------------------------------------------------------------.
+|--------------------------------------------------------------------|
+|                                                                    |
+|                     MagicSub_JoinType Table                        |
+|                                                                    |
+`-------------------------------------------------------------------*/
+
 
 CREATE TABLE MagicSub_JoinType(
 join_type_name varchar(255),
 join_subtype_name varchar (255)
 );
+
+
+ALTER TABLE MagicSub_JoinType 
+	ADD CONSTRAINT MagicSub_JoinType_pk
+	PRIMARY KEY (join_type_name,join_subtype_name);
+
+ALTER TABLE MagicSub_JoinType 
+	ADD CONSTRAINT MagicSub_JoinType_Type_fk
+	FOREIGN KEY (join_type_name)
+	REFERENCES MagicType (type_name);
+
+ALTER TABLE MagicSub_JoinType 
+	ADD CONSTRAINT MagicSub_JoinType_Subtype_fk
+	FOREIGN KEY (join_subtype_name)
+	REFERENCES MagicSubtype (subtype_name);
+
+
+/*-------------------------------------------------------------------.
+|--------------------------------------------------------------------|
+|                                                                    |
+|                        MagicCard Table                             |
+|                                                                    |
+`-------------------------------------------------------------------*/
 
 CREATE TABLE MagicCard (
 card_id int,
@@ -38,6 +108,30 @@ card_toughness int,
 card_price float(2)
 );
 
+ALTER TABLE MagicCard 
+	ADD CONSTRAINT MagicCard_pk
+	PRIMARY KEY (card_id);
+
+ALTER TABLE MagicCard 
+	ADD CONSTRAINT MagicCard_Set_fk
+	FOREIGN KEY (card_setid)
+	REFERENCES MagicSet (set_id);
+
+ALTER TABLE MagicCard 
+	ADD CONSTRAINT MagicCard_Type_fk
+	FOREIGN KEY (card_type)
+	REFERENCES MagicType (type_name);
+
+ALTER TABLE MagicCard 
+	ADD CONSTRAINT MagicCard_Subtype_fk
+	FOREIGN KEY (card_subtype)
+	REFERENCES MagicSubtype (subtype_name);
+
+
+
+/*------------------------------------------------------------------
+---------------------------Table Inserts----------------------------
+-------------------------------------------------------------------*/
 
 INSERT INTO MagicSet VALUES
 ('BNG', 'Born of the Gods', '', '02/2014'),
