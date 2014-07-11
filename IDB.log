@@ -1,0 +1,215 @@
+commit aa105449adccfcaf59858ae8b94f17fd1e6e460c
+Merge: 0939cbe dd6eed8
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 11 02:14:51 2014 +0000
+
+    Merge branch 'master' of http://github.com/majisto/cs373-idb
+
+commit 0939cbe4ed4340f06eafc76ba9827f9546beefe8
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 11 02:14:47 2014 +0000
+
+    Final commit for part 1.
+
+commit dd6eed8656bcab848aef5291833fdb2627f82e62
+Merge: 5e8c509 3114e1d
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Thu Jul 10 18:59:41 2014 -0500
+
+    Merge branch 'master' of https://github.com/majisto/cs373-idb
+
+commit 5e8c5098a8855605ac64bff9174c61771be33a0a
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Thu Jul 10 18:59:37 2014 -0500
+
+    pydoc documentation
+
+commit 3114e1dbed33fa5f76d140a6642d0de73996013f
+Author: majisto <majisto@gmail.com>
+Date:   Thu Jul 10 18:23:20 2014 -0500
+
+    Added technical report.  Fixes #18 Fixes #17 Fixes #16 Fixes #15 Fixes #14.
+
+commit 97a65835c723d9fa1ddddb030c80ed633afd8632
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Thu Jul 10 17:35:17 2014 -0500
+
+    Added Foriegn keys and primary keys to sql file
+
+commit 5948906ce3688f437d781cbd4f17d4c2a67eaf91
+Merge: a39532c 430327c
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 10 21:45:15 2014 +0000
+
+    Merge branch 'master' of http://github.com/majisto/cs373-idb
+
+commit a39532c362c768f2e071436ca1d3961a3c13ae54
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 10 21:44:19 2014 +0000
+
+    Added mtg_project folder that contains numerous working file including our django models.  More information can be found in the Readme.
+
+commit 430327c8d146845a202b0b4d698ab737f1002437
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 10 16:02:44 2014 -0500
+
+    adding useful files.
+
+commit 5198fbb025022af42c2308839480cd35f053f720
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 10 06:34:26 2014 +0000
+
+    commiting the backup of pythonanywhere static dir
+
+commit 337d245b4ef1a5bdad5b0ede2be01c43f2460171
+Author: majisto <majisto@gmail.com>
+Date:   Thu Jul 10 01:21:59 2014 -0500
+
+    Adding mtg_types_cards file to know which types and cards to put on static pages.
+
+commit ef20cc7467a518574d63e0a9f057ea7abafe8fac
+Author: majisto <majisto@gmail.com>
+Date:   Wed Jul 9 17:07:10 2014 -0500
+
+    Adding .css file.
+
+commit 21063feb3594921bc26c9dc12acbf477bdc5e2d0
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Tue Jul 8 21:41:43 2014 -0500
+
+    Tests run and pass on python anywhere
+
+commit b38cccc84ad0556932490942b5ae75d3c5a87cb1
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Tue Jul 8 20:46:25 2014 -0500
+
+    changed 'NULL' to NULL or empty string
+
+commit 2fc9b1d51ec4a4a53cd2916ef49d717d679f0a2f
+Merge: d7635cd 83956b3
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Tue Jul 8 20:32:01 2014 -0500
+
+    Merge branch 'master' of https://github.com/majisto/cs373-idb
+
+commit 83956b33b7c387fa2e2e4167eb3ee2040c50e8f0
+Author: majisto <majisto@gmail.com>
+Date:   Tue Jul 8 20:30:17 2014 -0500
+
+    Edited .sql file.
+
+commit d7635cd3100dd5812d88e7c6cd06f80cc7680337
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Tue Jul 8 20:28:36 2014 -0500
+
+    database_uml xcel file
+
+commit f61edd64fe5ca669ec4b06b6a0fdd02ad55a104a
+Author: tsherlock <the.tim.sherlock@gmail.com>
+Date:   Mon Jul 7 23:34:29 2014 -0500
+
+    Fixed apiary spacing problems
+
+commit db01b5cb9322b0207d97d5f36e1502a4d2f916cd
+Author: majisto <majisto@gmail.com>
+Date:   Mon Jul 7 23:08:51 2014 -0500
+
+    Added create tables in the .sql file.
+
+commit a095af4679129326eddfddf9d5463f29756df3a5
+Author: Mikkel Kim <wjsekfghks@gmail.com>
+Date:   Mon Jul 7 22:57:33 2014 -0500
+
+    Unit Tests Done Fixes #10
+
+commit 9051aff3df16e5f7a828ae72326a90f0d709292b
+Merge: a390a53 046a439
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Mon Jul 7 22:49:57 2014 -0500
+
+    Merge branch 'master' of https://github.com/majisto/cs373-idb
+
+commit a390a532814ed0f4bfa06748b99cb9dfebecbe51
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Mon Jul 7 22:49:32 2014 -0500
+
+    added datebase_uml picture and doc for tech documents
+
+commit 046a439c11b2d633aea3ed492787fd8e1f3e0022
+Author: Thien Vo <vohuythien@utexas.edu>
+Date:   Mon Jul 7 22:40:15 2014 -0500
+
+    Cleaned up filesystem, moved css and js folders out to root, fixes #23
+
+commit 55b4c8cf9be8252511e9861369950fe3ef198f18
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Mon Jul 7 20:42:37 2014 -0500
+
+    close to finished? api
+
+commit bc936ff646ff5a49cd1c54ccba42f7d04af05669
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Mon Jul 7 19:13:03 2014 -0500
+
+    apiary update
+
+commit 1bbc41824c10aac78ec93a9cda6f18eb1cefc913
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Mon Jul 7 00:02:48 2014 -0500
+
+    Adding all the files and images necessary for the Set_splash_page. closes #3 closes #4.
+
+commit ba655e68f504a80e96dcad3a59095ee31de2b222
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Sun Jul 6 23:59:32 2014 -0500
+
+    Adding all the files and images necessary for the Set_splash_page
+
+commit 790a9b78bc5fef3144782d452f80b35332413433
+Merge: 0824595 bbcac96
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Sun Jul 6 22:56:00 2014 -0500
+
+    Merge branch 'master' of https://github.com/majisto/cs373-idb
+
+commit 08245953ab5ef374f69f69935e6265eec9bd9b30
+Author: Ryan <rbrooks@cs.utexas.edu>
+Date:   Sun Jul 6 22:55:55 2014 -0500
+
+    getting database information
+
+commit bbcac96d39d45a38c66ecf3bf40e28e4212d7cb0
+Author: majisto <majisto@gmail.com>
+Date:   Sun Jul 6 21:58:05 2014 -0500
+
+    Changed mtg_types so it has the correct number of 25 types.
+
+commit 966e9c9d78a985e26c3c0c71fa98788287a0e1a5
+Author: tsherlock <the.tim.sherlock@gmail.com>
+Date:   Sun Jul 6 20:01:26 2014 -0500
+
+    Update apiary.apib
+
+commit 3542fa03bc85ffefdf86a2295f04e00877c8586d
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 2 19:53:20 2014 -0500
+
+    splash page working on site
+
+commit ab7fa95522ec57bedb20c6c692a3142e3fef8da6
+Author: majisto <majisto@gmail.com>
+Date:   Wed Jul 2 16:32:09 2014 -0500
+
+    Putting bootstrap files in.
+
+commit a785dc37ec041cea6eef68cba3c605ce2b4f7c23
+Author: ni42 <knightsofni.42@gmail.com>
+Date:   Wed Jul 2 16:08:29 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 79e7e84796e1e95ed66f59985a09a0a60d44f703
+Author: Barton Durbin <majisto@gmail.com>
+Date:   Tue Jul 1 03:39:14 2014 -0500
+
+    Initial commit
