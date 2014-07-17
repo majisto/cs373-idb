@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+
 from mtg_project.views import home, set_splash, ug, unh, ths, rtr, mma, m14, jou
 from mtg_project.views import gtc, fut, dgm, cns, bng, about, sets_template
 from mtg_project.views import guru_id_380442, guru_id_373603, guru_id_382303
@@ -6,6 +7,16 @@ from mtg_project.views import guru_id_136196, guru_id_370728, guru_id_9771
 from mtg_project.views import guru_id_366450, guru_id_370404, guru_id_378516
 from mtg_project.views import guru_id_369096, guru_id_270359, guru_id_73947
 from mtg_project.views import cards_splash, types_splash, enchantment_creature, legendary_creature, artifact, how_to_play
+
+
+
+#Phase 2
+from mtg_project.api import MagicCardResource, MagicSetResource, MagicTypeResource, MagicSubtypeResource
+
+magic_card_resource = MagicCardResource()
+magic_set_resource = MagicSetResource()
+magic_type_resource = MagicTypeResource()
+magic_subtype_resource = MagicSubtypeResource()
 
 
 
@@ -17,10 +28,10 @@ urlpatterns = patterns('',
     # url(r'^$', 'mtg_project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^sets$', set_splash),
-    url(r'^cards$', cards_splash),
-    url(r'^types$', types_splash),
+    #url(r'^admin/', include(admin.site.urls)),
+    #url(r'^sets$', set_splash),
+    #url(r'^cards$', cards_splash),
+    #url(r'^types$', types_splash),
     url(r'^template$', sets_template),
     url(r'^sets/UNH', unh),
     url(r'^sets/UG', ug),
@@ -49,7 +60,26 @@ urlpatterns = patterns('',
     url(r'^types/enchantment_creature', enchantment_creature),
     url(r'^types/legendary_creature', legendary_creature),
     url(r'^types/artifact', artifact),
+    #url(r'^about$', about),
+    #url(r'^how_to_play', how_to_play),
+    #url(r'$', home)
+
+
+
+    #Phase 2
+    (r'^cards/', include(magic_card_resource.urls)),
+    (r'^sets/', include(magic_set_resource.urls)),
+    (r'^type/', include(magic_type_resource.urls)),
+
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^sets$', set_splash),
+    url(r'^cards$', cards_splash),
+    url(r'^types$', types_splash),
+
     url(r'^about$', about),
     url(r'^how_to_play', how_to_play),
-    url(r'$', home)
+    #url(r'$', home)
+
+
 )
+
