@@ -2271,11 +2271,11 @@ pre code{
 	}
 
 	.col-lg-11{
-		width:91.66666667%
+		width:89.66666667%
 	}
 
 	.col-lg-10{
-		width:83.33333333%
+		width:84%
 	}
 
 	.col-lg-9{
@@ -4939,7 +4939,14 @@ a.list-group-item.active>.badge,.nav-pills>.active>a>.badge{
 .jumbotron{
 	padding:30px;
 	margin-bottom:30px;
-	color:inherit;
+	color:solid black;
+	background-color:#eee
+}
+
+.jumbotron-types{
+	padding:30px;
+	margin-bottom:30px;
+	color:solid black;
 	background-color:#eee
 }
 

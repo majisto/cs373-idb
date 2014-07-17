@@ -218,7 +218,7 @@ $(function() {
 				$('<img/>').load( function() {
 
 					//$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
-                    $rgGallery.find('div.rg-image').empty().append('<a href="'+ link +'" target="_blank"><img src="' + largesrc + '"></a>');
+                    $rgGallery.find('div.rg-image').empty().append('<a href="'+ link +'"><img src="' + largesrc + '"></a>');
 
 					if( title )
 						$rgGallery.find('div.rg-caption').show().children('p').empty().text( title );

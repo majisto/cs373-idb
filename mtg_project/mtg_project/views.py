@@ -12,6 +12,9 @@ def set_splash(request):
 def cards_splash(request):
     return render(request, "cards_splash_page.html")
 
+def types_splash(request):
+    return render(request, "types_splash.html")
+
 def unh(request):
     return render(request, "set_unh.html")
 
@@ -54,8 +57,8 @@ def about(request):
 def sets_template(request):
     return render(request, "sets_template.html")
 
-def guru_id_380422(request):
-    return render(request, "guru_id_380422.html")
+def guru_id_380442(request):
+    return render(request, "guru_id_380442.html")
 
 def guru_id_373603(request):
     return render(request, "guru_id_373603.html")
@@ -84,11 +87,23 @@ def guru_id_378516(request):
 def guru_id_369096(request):
     return render(request, "guru_id_369096.html")
 
-def guru_id_270539(request):
-    return render(request, "guru_id_270539.html")
+def guru_id_270359(request):
+    return render(request, "guru_id_270359.html")
 
 def guru_id_73947(request):
     return render(request, "guru_id_73947.html")
+
+def enchantment_creature(request):
+    return render(request, "type_enchantment_creature.html")
+
+def legendary_creature(request):
+    return render(request, "type_legendary_creature.html")
+
+def artifact(request):
+    return render(request, "type_artifact.html")
+
+def how_to_play(request):
+    return render(request, "how_to_play.html")
 
 
 
