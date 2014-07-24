@@ -32,6 +32,25 @@ class MagicCard(models.Model):
         from django.core.urlresolvers import reverse
         return reverse('cards.views.details', args=[str(self.card_ID)])
 
+    def get_card_attr(self):
+        result = []
+        result.append(self.card_ID)
+        result.append(self.card_name)
+        result.append(self.card_setID)
+        result.append(self.card_type)
+        result.append(self.card_subtype)
+        result.append(self.card_mana_cost)
+        result.append(self.card_converted_cost)
+        result.append(self.card_loyalty)
+        result.append(self.card_rarity)
+        result.append(self.card_text)
+        result.append(self.card_flavor_text)
+        result.append(self.card_power)
+        result.append(self.card_toughness)
+        result.append(self.card_price)
+        return result
+
+
 
 class MagicSet(models.Model):
     """
@@ -41,7 +60,6 @@ class MagicSet(models.Model):
     """
     set_ID = models.CharField(max_length =8)
     set_name = models.CharField(max_length = 255)
-    set_symbol =  models.CharField(max_length = 255)
     set_release_date = models.CharField('date released', max_length = 255) # mm/yyyy
     set_num_cards = models.IntegerField()
 
@@ -55,6 +73,8 @@ class MagicSet(models.Model):
         from django.core.urlresolvers import reverse
         return reverse('sets.views.details', args=[str(self.set_ID)])
 
+    def set_id(self):
+        return self.set_ID
 
 
 
