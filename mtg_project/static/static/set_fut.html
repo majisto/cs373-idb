@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://getbootstrap.com/examples/theme/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/mtg_set_images/icon.jpg">
+
+    <title>FUT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/Cover Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap theme -->
+    <link href="../static/Cover Template for Bootstrap_files/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/Cover Template for Bootstrap_files/theme_about.css" rel="stylesheet">
+
+<!--     <!-- Testing theme -->
+    <link href="../static/Cover Template for Bootstrap_files/testing.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Theme Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Theme Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style id="holderjs-style" type="text/css"></style><link rel="stylesheet" type="text/css" href="chrome-extension://peeecebkcdlibcfllbpmmkhggflcppem/Content%20Script/Content.css"></head>
+
+  <body role="document" >
+
+    {% include navbar_template %}
+
+
+
+    <div class="container theme-showcase" role="main">
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="../static/mtg_set_images/about_background.jpg" alt="First slide" >
+            </div>
+          </div>
+        </div>
+
+        <style>
+            img.myne{
+            display: block;
+            margin-left: auto;
+            margin-right: auto }
+        </style>
+
+      <img class="myne" class="img-thumbnail" alt="200x200" src="../static/mtg_set_images/symbol_{{lower_set_id}}.jpg" align="middle">
+
+
+
+      <div class="jumbotron">
+        <h1>{{set_name}}</h1>
+        <p>
+        <i>The quest to mend Dominaria’s temporal and planar damage continues. A temporal
+        rift connected to an alternate Dominaria has enabled Phyrexian horrors to cross over into the
+        present day. Freyalise is gone, having given her planeswalker's spark and her life to close that
+        rift, thereby protecting her sanctum of Skyshroud one last time.But time fractures still
+        plague Dominaria. The damage to the planar fabric at Tolaria was so severe that it couldn't be
+        healed — not in the present day. The heroes seek out the planeswalker Karn, the only being ever
+        to travel through time. To heal Tolaria’s rift, Karn uses the full extent of his planeswalking
+        power to enter the rift and return to the past, to the moment before the archwizard Barrin cast
+        a spell that obliterated countless Phyrexians and himself. Karn succeeds and seals the planar
+        rift before Barrin’s actions can rip it open. In the next moment, Karn is lost. Even as Venser
+        begins to realize his full potential, the planeswalker Jeska returns to Dominaria for the first
+        time since Karona fell. Her friend and ally Karn is gone, and someone will pay. An ancient, evil
+        intelligence drives Jeska’s wrath and threatens to undermine Teferi and Jhoira’s efforts to
+        complete Dominaria’s healing: Leshrac has returned.
+        </i>
+        </p>
+
+        <p>The set features {{num_cards}} cards, 81 of which are timeshifted "pre-prints", i.e.
+        cards that have not been printed before but may appear in a future set, also known as
+        futureshifted. Each of the cards features some quality that has never appeared in the game
+        before, such as a new keyword ability (Fleshwrither), the application of a new keyword for
+        an old ability (Thornweald Archer), or even referencing cards and card types that do not exist
+        yet (Goldmeadow Lookout, Steamflogger Boss). Each of these unique aspects appear on only a
+        small number of cards, indicating that they may be more properly explored in later sets.
+        Additionally, most of the cards in some way reference unexplored planes, hinting at potential
+        themes and locations for upcoming sets. The cards also feature a new "futuristic" card frame
+        to hint at potential changes to the layout of Magic cards and to denote which cards are actually
+        timeshifted. However, it has been confirmed that the Future Sight frame will not become the
+        norm for subsequent sets. The new card frame sports specific symbols for different card types.
+        As with Planar Chaos, the cards have the standard colored rarity symbols. It was released
+        on {{release_date}}.</p>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="list-group">
+          <a class="list-group-item active">
+            Example cards
+          </a>
+            {% for card in cards %}
+            <a style="color:blue" href="http://ni42.pythonanywhere.com/cards/id={{card.card_id}}" {{card_id}} class="list-group-item">{{card.card_name}}</a>
+            {% endfor %}
+        </div>
+      </div><!-- /.col-sm-4 -->
+
+
+    </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/Cover Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="../static/Cover Template for Bootstrap_files/bootstrap.min.js"></script>
+    <script src="../static/Cover Template for Bootstrap_files/docs.min.js"></script>
+
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" title="" data-original-title="Copy to clipboard">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1404840585539">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com">         <embed src="/assets/flash/ZeroClipboard.swf?noCache=1404840585539" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com" scale="exactfit">                </object></div><div class="extLives"></div></body></html>
