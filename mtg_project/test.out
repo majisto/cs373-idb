@@ -2,3 +2,9 @@ tests.py
 Done.
 Creating test database for alias 'default'...
 Destroying test database for alias 'default'...
+
+....................................
+----------------------------------------------------------------------
+Ran 36 tests in 3.189s
+
+OK
