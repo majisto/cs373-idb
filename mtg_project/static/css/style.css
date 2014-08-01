@@ -1,97 +1,140 @@
-.rg-image-wrapper{
-	position:relative;
-	padding:20px 30px;
-	background:transparent url(../mtg_set_images/black.png) repeat top left;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	min-height:20px;
+* {
+	margin:0;
+	padding:0;
 }
-.rg-image{
-	position:relative;
-	text-align:center;
-	line-height:0px;
-}
-.rg-image img{
-	max-height:100%;
-	max-width:100%;
-}
-.rg-image-nav a{
-	position:absolute;
-	top:0px;
-	left:0px;
-	background:#000 url(../mtg_set_images/nav.png) no-repeat -20% 50%;
-	width:28px;
+html, body {
 	height:100%;
-	text-indent:-9000px;
-	cursor:pointer;
-	opacity:0.3;
-	outline:none;
-	-moz-border-radius: 10px 0px 0px 10px;
-	-webkit-border-radius: 10px 0px 0px 10px;
-	border-radius: 10px 0px 0px 10px;
 }
-.rg-image-nav a.rg-image-nav-next{
-	right:0px;
-	left:auto;
-	background-position:115% 50%;
-	-moz-border-radius: 0px 10px 10px 0px;
-	-webkit-border-radius: 0px 10px 10px 0px;
-	border-radius: 0px 10px 10px 0px;
+body {
+	background:#000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	line-height:1em;
+	color:#afa196;
+	font-weight:bold;
 }
-.rg-image-nav a:hover{
-	opacity:0.8;
+
+img {
+	border:0;
+	vertical-align:top;
+	text-align:left;
 }
-.rg-caption {
+
+ul, ol {
+	list-style:none;
+}
+
+
+.wrapper {
+	width:100%;
+	overflow:hidden;
+}
+
+
+/*==== GLOBAL =====*/
+#main {
+	width:1000px;
+	margin:0 auto;
+	background:url(../mtg_set_images/404_bg.jpg) center center no-repeat;
+	/*background-size: contain;*/
+	font-size:.9375em;
+}
+
+#header {
+	height:190px;
+}
+#content {
+	min-height:457px;
+	height:auto !important;
+	height:457px;
+}
+#footer {
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#333;
+	font-size:12px;
 	text-align:center;
-	margin-top:15px;
+	padding:10px 0 0 0;
+	font-weight:normal;
+}
+	#footer a {
+		color:#333;
+	}
+
+p {
+	margin-bottom:25px;
+	text-align:center;
+	padding:0 35px;
+	letter-spacing:-1px;
+	font-size:20px;
+	color:#0404B4;
+}
+
+/*----- txt, links, lines, titles -----*/
+a {
+	color:#fff;
+	outline:none;
+}
+a:hover{
+	text-decoration:none;
+}
+
+h1 {
+	font-size:50px;
+	line-height:1.1em;
+	font-weight:normal;
+	color:#afa196;
+	text-align:center;
+	padding:94px 0 0 0;
+	text-transform:capitalize;
+	font-variant:small-caps;
+	letter-spacing:-2px;
+}
+	h1 span {
+		display:block;
+		font-size:50px;
+		line-height:25px;
+		color:#6b635e;
+		font-variant:normal;
+		text-transform:none;
+		letter-spacing:0;
+		font-weight:bold;
+		letter-spacing:-1px;
+		color:#31B404;
+	}
+
+
+/*===== content =====*/
+#content .nav {
 	position:relative;
+	height:368px;
 }
-.rg-caption p{
-	font-size:17px;
-	letter-spacing:2px;
-	font-family: 'Trebuchet MS', 'Myriad Pro', Arial, sans-serif;
-	line-height:16px;
-	padding:0 15px;
-	text-transform:uppercase;
-}
-.rg-view{
-	height:30px;
-}
-.rg-view a{
-	display:block;
-	float:right;
-	width:16px;
-	height:16px;
-	margin-right:3px;
-	background:#464646 url(../mtg_set_images/views.png) no-repeat top left;
-	border:3px solid #464646;
-	opacity:0.8;
-}
-.rg-view a:hover{
-	opacity:1.0;
-}
-.rg-view a.rg-view-full{
-	background-position:0px 0px;
-}
-.rg-view a.rg-view-selected{
-	background-color:#6f6f6f;
-	border-color:#6f6f6f;
-}
-.rg-view a.rg-view-thumbs{
-	background-position:0px -16px;
-}
-.rg-loading{
-	width:46px;
-	height:46px;
-	position:absolute;
-	top:50%;
-	left:50%;
-	background:#000 url(../mtg_set_images/ajax-loader.gif) no-repeat center center;
-	margin:-23px 0px 0px -23px;
-	z-index:100;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	opacity:0.7;
-}
+	#content .nav li {
+		position:absolute;
+		font-size:20px;
+		line-height:1.2em;
+		font-weight:bold;
+		text-transform:uppercase;
+		font-weight:normal;
+		letter-spacing:-1px;
+	}
+	#content .nav li.home {
+		left:451px;
+		top:300px;
+	}
+	#content .nav li.site_map {
+		left:120px;
+		top:60px;
+	}
+	#content .nav li.search {
+		right:90px;
+		top:60px;
+	}
+		#content .nav li a {
+			color:#08088A;
+			text-decoration:none;
+		}
+		#content .nav li a:hover {
+			text-decoration:underline;
+		}
+
+/*==========================================*/

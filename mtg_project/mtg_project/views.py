@@ -172,7 +172,7 @@ def set_template(request, set_id):
 
 #ABOUT PAGE
 def about(request):
-    return render(request, "ext_home_splash.html")
+    return render(request, "about.html", {"navbar_template":nav_template})
 
 #A TESTING PAGE
 # def sets_template(request):
@@ -253,6 +253,8 @@ def type_template(request, type_name): # changed from type_id
 
     return render(request, "types_template.html", html_dict)
 
+def testing(request):
+    return render(request, "testing.html", {"navbar_template":nav_template})
 
 
 

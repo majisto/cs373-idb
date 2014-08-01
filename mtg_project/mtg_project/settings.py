@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Added.
+    'haystack',
     'mtg_project',
 )
 
@@ -73,6 +75,13 @@ DATABASES = {
         'PORT' : '3306',
         'TEST_NAME' : 'ni42$test_default',
     }
+}
+
+# Haystack Stuff
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+    },
 }
 
 # Internationalization
