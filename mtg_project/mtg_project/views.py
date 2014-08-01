@@ -172,7 +172,7 @@ def set_template(request, set_id):
 
 #ABOUT PAGE
 def about(request):
-    return render(request, "about.html", {"navbar_template":nav_template})
+    return render(request, "ext_home_splash.html")
 
 #A TESTING PAGE
 # def sets_template(request):
