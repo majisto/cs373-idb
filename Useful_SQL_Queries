@@ -1,1 +1,7 @@
 select Nname, Count(*)c from Ncards group by Nname HAVING c > 1;
+
+Load Database:
+
+./manage.py shell
+run db_import_script.sql (This updates database.  May have to truncate tables.)
+./manage.py syncdb
