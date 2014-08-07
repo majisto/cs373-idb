@@ -1,0 +1,5 @@
+{{ object.set_name }}
+{{ object.set_release_date }}
+{{ object.set_ID }}
+{{ object.set_details }}
+{{ object.set_story }}

@@ -1,0 +1,152 @@
+{% extends "ext_base.html"%}
+{% block html_top %}
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock html_top %}
+{% block page_title%}API Implement{% endblock %}
+{% block api_active %}active{% endblock %}
+{% block content %}
+
+
+<style>
+    div {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    }
+    .timeline {
+        width: 400px;
+        padding-top:50px;
+        margin-right:80%;
+        margin-left:20%;
+    }
+    .timeline .timeline-item {
+        width: 100%;
+    }
+    .timeline .timeline-item .info, .timeline .timeline-item .year {
+        color: #222222;
+        display: block;
+        float:left;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .timeline .timeline-item.close .info, .timeline .timeline-item.close .year {
+        color: #ccc;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .timeline .timeline-item .year {
+        font-size: 24px;
+        font-weight: bold;
+        width: 22%;
+    }
+    .timeline .timeline-item .info {
+        width: 100%;
+        width: 78%;
+        margin-left: -2px;
+        padding: 0 0 40px 35px;
+        border-left: 4px solid #aaa;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .timeline .timeline-item .marker {
+        background-color: #fff;
+        border: 4px solid #aaa;
+        height: 20px;
+        width: 20px;
+        border-radius: 100px;
+        display: block;
+        float: right;
+        margin-right: -14px;
+        z-index: 2000;
+        position: relative;
+    }
+    .timeline .timeline-item.active .info, .timeline .timeline-item:hover .info {
+        color: #FFF;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .timeline .timeline-item.active .year, .timeline .timeline-item:hover .year {
+        color: #D00000 ;
+    }
+    .timeline .timeline-item .marker .dot {
+        background-color: white;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+        display: block;
+        border: 4px solid white;
+        height: 12px;
+        width: 12px;
+        border-radius: 100px;
+        float: right;
+        z-index: 2000;
+        position: auto;
+    }
+    .timeline .timeline-item.active .marker .dot, .timeline .timeline-item:hover .marker .dot {
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+        background-color: #9DB668;
+        box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .timeline-item:hover a{
+        color:#0101DF;
+    }
+    a {
+
+    }
+    .link {
+        color:#222222;
+    }
+
+
+</style>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" align="middle">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../static/other_images/Finals.jpg" alt="First slide" >
+      </div>
+    </div>
+</div>
+
+
+
+<!-- You will need to convert css to LESS -->
+<div class="timeline">
+
+    {% for id, year, recap, mvp, champ in teams %}
+    <div class="timeline-item ">
+        <div class="year">{{year}} <span class="marker"><span class="dot"></span></span></div>
+        <div class="info">
+            {{recap}} For more about {{mvp}} and the {{champ}} go <a class="link" href="http://nbadb.pythonanywhere.com/teams/{{id}}" target="_blank">here</a>.
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+<script type="text/javascript">
+    $(".timeline-item").hover(function () {
+        $(".timeline-item").removeClass("active");
+        $(this).toggleClass("active");
+        $(this).prev(".timeline-item").toggleClass("close");
+        $(this).next(".timeline-item").toggleClass("close");
+    });
+</script>
+
+
+
+
+
+
+
+{% endblock %}

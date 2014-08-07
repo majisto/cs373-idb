@@ -1,0 +1,204 @@
+{% extends "ext_base.html"%}
+{% block html_top %}
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock html_top %}
+{% block page_title%}API Implement{% endblock %}
+{% block api_active %}active{% endblock %}
+{% block content %}
+
+
+<style>
+    div.help{
+        padding-top:25px;
+        padding-bottom:20px;
+        text-align:center;
+        font-family: monospace;
+        font-size:20px;
+        color:#3366FF;
+    }
+</style>
+<div class="container help" role="main" >
+    This is a map showing a number of top NBA teams and their locations
+</div>
+
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb9DlwLNwwp-8uf8JJXSxdeQYJS5UtyFA">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var spurs = new google.maps.LatLng(29.426933, -98.437445);
+        var heat = new google.maps.LatLng(25.789097, -80.204044);
+        var lakers = new google.maps.LatLng(34.052234, -118.243685);
+        var suns = new google.maps.LatLng(33.448377, -112.074037);
+        var mavericks = new google.maps.LatLng(32.780140, -96.800451);
+        var celtics = new google.maps.LatLng(42.358431, -71.059773);
+        var wizards = new google.maps.LatLng(38.907192, -77.036871);
+        var cavaliers = new google.maps.LatLng(41.499320, -81.694361);
+        var bulls = new google.maps.LatLng(41.878114, -87.629798);
+        var thunder = new google.maps.LatLng(35.467560, -97.516428);
+        var mapOptions = {
+            center: new google.maps.LatLng(36.446418, -99.184570),
+        // center: new google.maps.LatLng(29.416983, -98.478814),
+        //   center: (lat: 25.789097 lng: -80.204044),
+        //   center: (lat: 34.052234 lng: -118.243685),
+        zoom: 5
+
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        map.setMapTypeId(google.maps.MapTypeId.HYBRID);
+
+
+        var spurs_marker = new google.maps.Marker
+        ({
+        position: spurs,
+        map: map,
+        title:"San Antonio Spurs",
+        animation: google.maps.Animation.DROP
+        });
+
+        var heat_marker = new google.maps.Marker
+        ({
+        position: heat,
+        map: map,
+        title:"Miami Heat",
+        animation: google.maps.Animation.DROP
+        });
+
+        var lakers_marker = new google.maps.Marker
+        ({
+        position: lakers,
+        map: map,
+        title:"L.A. Lakers",
+        animation: google.maps.Animation.DROP
+        });
+
+        var suns_marker = new google.maps.Marker
+        ({
+        position: suns,
+        map: map,
+        title:"Phoenix Suns",
+        animation: google.maps.Animation.DROP
+        });
+
+        var mavericks_marker = new google.maps.Marker
+        ({
+        position: mavericks,
+        map: map,
+        title:"Dallas Mavericks",
+        animation: google.maps.Animation.DROP
+        });
+
+        var celtics_marker = new google.maps.Marker
+        ({
+        position: celtics,
+        map: map,
+        title:"Boston Celtics",
+        animation: google.maps.Animation.DROP
+        });
+
+        var wizards_marker = new google.maps.Marker
+        ({
+        position: wizards,
+        map: map,
+        title:"Washington Wizards",
+        animation: google.maps.Animation.DROP
+        });
+
+        var cavaliers_marker = new google.maps.Marker
+        ({
+        position: cavaliers,
+        map: map,
+        title:"Cleveland Cavaliers",
+        animation: google.maps.Animation.DROP
+        });
+
+        var bulls_marker = new google.maps.Marker
+        ({
+        position: bulls,
+        map: map,
+        title:"Chicago Bulls",
+        animation: google.maps.Animation.DROP
+        });
+
+        var thunder_marker = new google.maps.Marker
+        ({
+        position: thunder,
+        map: map,
+        title:"Oklahoma City Thunder",
+        animation: google.maps.Animation.DROP
+        });
+
+
+        var spurs_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the San Antonio Spurs - ".concat({{testing}}.toString())});
+        var heat_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Miami Heat"});
+        var lakers_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Los Angeles Lakers"});
+        var suns_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Phoenix Suns"});
+        var mavericks_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Dallas Mavericks"});
+        var celtics_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Boston Celtics"});
+        var wizards_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Washington Wizards"});
+        var cavaliers_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Cleveland Cavaliers"});
+        var bulls_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Chicago Bulls"});
+        var thunder_infowindow = new google.maps.InfoWindow({content:"Click on the marker for more information on the Oklahoma City Thunder"});
+
+        google.maps.event.addListener(spurs_marker, 'mouseover', function () { spurs_infowindow.open(map,spurs_marker); });
+        google.maps.event.addListener(spurs_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/1/");});
+        google.maps.event.addListener(spurs_marker, 'mouseout', function () { spurs_infowindow.close(map,spurs_marker); } );
+
+        google.maps.event.addListener(heat_marker, 'mouseover', function () { heat_infowindow.open(map,heat_marker); });
+        google.maps.event.addListener(heat_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/2/");});
+        google.maps.event.addListener(heat_marker, 'mouseout', function () { heat_infowindow.close(map,heat_marker); } );
+
+        google.maps.event.addListener(lakers_marker, 'mouseover', function () { lakers_infowindow.open(map,lakers_marker); });
+        google.maps.event.addListener(lakers_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/3/");});
+        google.maps.event.addListener(lakers_marker, 'mouseout', function () { lakers_infowindow.close(map,lakers_marker); } );
+
+        google.maps.event.addListener(suns_marker, 'mouseover', function () { suns_infowindow.open(map,suns_marker); });
+        google.maps.event.addListener(suns_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/4/");});
+        google.maps.event.addListener(suns_marker, 'mouseout', function () { suns_infowindow.close(map,suns_marker); } );
+
+        google.maps.event.addListener(mavericks_marker, 'mouseover', function () { mavericks_infowindow.open(map,mavericks_marker); });
+        google.maps.event.addListener(mavericks_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/5/");});
+        google.maps.event.addListener(mavericks_marker, 'mouseout', function () { mavericks_infowindow.close(map,mavericks_marker); } );
+
+        google.maps.event.addListener(celtics_marker, 'mouseover', function () { celtics_infowindow.open(map,celtics_marker); });
+        google.maps.event.addListener(celtics_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/6/");});
+        google.maps.event.addListener(celtics_marker, 'mouseout', function () { celtics_infowindow.close(map,celtics_marker); } );
+
+        google.maps.event.addListener(wizards_marker, 'mouseover', function () { wizards_infowindow.open(map,wizards_marker); });
+        google.maps.event.addListener(wizards_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/7/");});
+        google.maps.event.addListener(wizards_marker, 'mouseout', function () { wizards_infowindow.close(map,wizards_marker); } );
+
+        google.maps.event.addListener(cavaliers_marker, 'mouseover', function () { cavaliers_infowindow.open(map,cavaliers_marker); });
+        google.maps.event.addListener(cavaliers_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/8/");});
+        google.maps.event.addListener(cavaliers_marker, 'mouseout', function () { cavaliers_infowindow.close(map,cavaliers_marker); } );
+
+        google.maps.event.addListener(bulls_marker, 'mouseover', function () { bulls_infowindow.open(map,bulls_marker); });
+        google.maps.event.addListener(bulls_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/9/");});
+        google.maps.event.addListener(bulls_marker, 'mouseout', function () { bulls_infowindow.close(map,bulls_marker); } );
+
+        google.maps.event.addListener(thunder_marker, 'mouseover', function () { thunder_infowindow.open(map,thunder_marker); });
+        google.maps.event.addListener(thunder_marker, 'click', function() {window.open("http://nbadb.pythonanywhere.com/teams/10/");});
+        google.maps.event.addListener(thunder_marker, 'mouseout', function () { thunder_infowindow.close(map,thunder_marker); } );
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div class="container" id="map-canvas" style="width:100%;height:90%;"></div>
+  </body>
+
+{% endblock %}

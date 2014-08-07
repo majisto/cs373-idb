@@ -1,0 +1,99 @@
+{% extends "ext_base.html" %}
+{% block html_top %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock html_top%}
+{% block page_title %} {{card_name}} {% endblock page_title %}
+{% block cards_active %}active{%  endblock cards_active%}
+{% block content %}
+        <style>
+            img.myne{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 25px;}
+
+            center.hi{
+                color:#FF3333;
+                align-content: center;
+            }
+        </style>
+        <a href="http://ni42.pythonanywhere.com/cards" ><img class="myne" class="span6" class="img-thumbnail" alt="200x200" src="../ni42/{{card_setID}}/{{card_id}}.full.jpg" {{card_setID|urlencode}}{{card_id|urlencode}}></a>
+        <p>
+
+        </p>
+
+    </div>
+
+    <div class="container theme-showcase">
+      <div class="list-group" align="center">
+        <h>CARD INFORMATION</h>
+      </div>
+        <div class="list-group" style="width:68%;margin-left:auto;margin-right:auto;">
+        <center class="list-group-item hi">Name: <a class="list-group-item ">{{ card_name }}</a></center>
+
+        <center class="list-group-item hi" align="middle">Set Name: <a style="color:#2a9fd6" href="http://ni42.pythonanywhere.com/sets/{{card_setID}}"  {{card_setID|urlencode}} class="list-group-item "> {{card_setName}}</a></center>
+
+        <center class="list-group-item hi" align="middle">Card Type: <a style="color:#2a9fd6" href="http://ni42.pythonanywhere.com/types/{{card_type}}"  {{card_type|urlencode}} class="list-group-item ">{{card_type}}</a></center>
+
+        {% if card_subtype %}
+            <center class="list-group-item hi" align="middle">Subtype: <a class="list-group-item hi">{{card_subtype}}</a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Subtype: <a class="list-group-item ">None</a></center>
+        {% endif %}
+
+        {% if card_mana_cost %}
+            <center class="list-group-item hi" align="middle">Mana Cost: <a class="list-group-item hi">{{card_mana_cost}}</a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Mana Cost: <a class="list-group-item ">none</a></center>
+        {% endif %}
+
+        <center class="list-group-item hi" align="middle">Converted Mana Cost: <a class="list-group-item hi">{{card_converted_cost}}</a></center>
+
+        {% if card_loyalty %}
+            <center class="list-group-item hi" align="middle">Loyalty: <a class="list-group-item hi">{{card_loyalty}}</a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Loyalty: <a class="list-group-item ">none</a></center>
+        {% endif %}
+
+        <center class="list-group-item hi" align="middle">Rarity: <a class="list-group-item hi">{{card_rarity}}</a></center>
+
+        {% if card_text %}
+            <center class="list-group-item hi" align="middle">Card Text: <a class="list-group-item hi">{{card_text}}</a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Card Text: <a class="list-group-item ">none</a></center>
+        {% endif %}
+
+        {% if card_flavor_text %}
+            <center class="list-group-item hi" align="middle">Flavor Text: <a class="list-group-item hi"><i>{{card_flavor_text}}</i></a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Flavor Text: <a class="list-group-item ">none</a></center>
+        {% endif %}
+
+        {% if card_power < 0 %}
+            <center class="list-group-item hi" align="middle">Power: <a class="list-group-item "> * </a></center>
+        {% elif card_power >= 0 %}
+            <center class="list-group-item hi" align="middle">Power: <a class="list-group-item hi">{{card_power}}</a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Power: <a class="list-group-item ">none</a></center>
+        {% endif %}
+
+        {% if card_toughness < 0 and card_toughness > -2 %}
+            <center class="list-group-item hi" align="middle">Toughness: <a class="list-group-item "> * </a></center>
+        {% elif card_toughness >= 0 %}
+            <center class="list-group-item hi" align="middle">Toughness: <a class="list-group-item hi">{{card_toughness}}</a></center>
+        {% elif card_toughness <= -2 %}
+            <center class="list-group-item hi" align="middle">Toughness: <a class="list-group-item ">1+* </a></center>
+        {% else %}
+            <center class="list-group-item hi" align="middle">Toughness: <a class="list-group-item ">none</a></center>
+        {% endif %}
+
+        <center class="list-group-item hi" align="middle">Current Price: <a class="list-group-item hi">{{card_price}}</a></center>
+        </div>
+    </div>
+    </div>
+{% endblock content %}

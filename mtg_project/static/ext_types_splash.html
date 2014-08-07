@@ -1,0 +1,62 @@
+{% extends "ext_base.html" %}
+{% block html_top %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock html_top%}
+{% block page_title %}Magic Types{% endblock page_title %}
+{% block types_active %}active{%  endblock types_active%}
+{% block content %}
+  <style>
+      .types-button{
+          /*margin-left: auto;*/
+          /*margin-right: 1000px auto;*/
+          margin: 1em auto;
+          /*margin-bottom: 10px;*/
+          /*margin-top: 10px;*/
+          width: 16em;
+          /*height: 7em;*/
+          float: left;
+          padding-right: 10px;
+          padding-left: 10px;
+          /*white-space: normal;*/
+      }
+      .types-button-div{
+          /*margin-left: auto;*/
+          margin: auto;
+          /*margin-right: auto;*/
+          /*margin: 2p auto;*/
+          /*float: middle;*/
+          /*position: inline;*/
+          /*display:block;*/
+          width: 23em;
+          /*margin-right: 10px;*/
+
+      }
+      .text-div{
+          margin: 0 auto;
+          text-align: center;
+      }
+  </style>
+
+	<div class="container">
+        <div class="content text-div">
+            <h2>Magic Types</h2>
+            <p>A <b>card type</b> is a characteristic that each Magic: the Gathering card has. Non-traditional Magic cards and tokens also have card types. Each card type has its own rules for how objects with that type are played, cast, or otherwise handled during gameplay.</p>
+            <p>A <b>Subtype</b> is a characteristic of a card. Every card has a card type and may have one or more subtypes.</p>
+            <p><b>Example</b>: "Basic Land -- Mountain" means the card is a land with the subtype Mountain. "Creature -- Goblin Wizard" means the card is a creature with the subtypes Goblin and Wizard. "Artifact -- Equipment" means the card is an artifact with the subtype Equipment.</p>
+
+        </div>
+        <div class="row" style="text-align:center;" align="center">
+            <p>
+
+            {% for id, type in types %}
+                <div class="types-button-div  col-xs-5 col-sm-4 col-lg-3"><a href="http://ni42.pythonanywhere.com/types/{{ type }}" ><button type="button" class="btn btn-lg btn-primary types-button"> {{type}} </button></a></div>
+            {% endfor %}
+            </p>
+        </div>
+	</div>
+{% endblock content %}

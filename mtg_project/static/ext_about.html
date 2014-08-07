@@ -1,0 +1,106 @@
+{% extends "ext_base.html"%}
+{% block html_top %}
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock html_top %}
+{% block page_title%}About{% endblock %}
+{% block about_active %}active{% endblock %}
+{% block content %}
+
+
+<style>
+    th.wtf{
+        text-align:center;
+    }
+    div.why{
+
+    }
+</style>
+
+
+<div class="jumbotron container">
+  <h1>About MtG Guru</h1>
+  <p>Our website is a Magic:the Gathering database. We have 12 different magic sets with all the cards from each availeable for
+     viewing. We have a cards page which displays 2 randomly generated cards per set (24 total). Each of these links to a dedicated
+     card page which shows the card art and all of the card information in an easy to see and understand way. We have a types page which displays
+     all of the different types of magic cards, and each one goes to a page which describes what types are and a list of the various subtypes per.
+     We have a how to play page that provides a breif description and 5 different videos. The last page we have is the Api-implementation page. Our group
+     had the NBADB page. We decided to get all of their teams and add their hometowns to a google map and when you click on the marker you will be taken to
+     their page for that particular team.
+  </p>
+    <p>Technologies used:
+        <a href="http://getbootstrap.com/" target="_blank">Twitter bootstrap</a>,
+        <a href="https://www.djangoproject.com/" target="_blank">Django</a>,
+        <a href="http://www.mysql.com/" target="_blank">mySQL</a>,
+        <a href="http://apiary.io/" target="_blank">Apiary</a>,
+        <a href="https://developers.google.com/maps/" target="_blank">Google Maps API</a>,
+        <a href="https://www.python.org/" target="_blank">Python</a>,
+        <a href="http://www.w3schools.com/js/" target="_blank">Javascript</a>,
+        <a href="http://jquery.com/" target="_blank">JQuery</a>,
+        <a href="http://www.w3.org/html/" target="_blank">HTML5</a>,
+        <a href="http://www.w3.org/Style/CSS/" target="_blank">CSS3</a>
+    </p>
+</div>
+
+<div >
+    <table class="table table-bordered" style="width:50%;text-align:center;" align="center">
+        <thead style="text-align:center">
+          <tr>
+              <th colspan="4" style="text-align:center;" >Knights Who Say Nil!</th>
+          </tr>
+          <tr>
+            <th class="wtf">Group Members</th>
+            <th class="wtf">CS IDs</th>
+            <th class="wtf">Github IDs</th>
+            <th class="wtf">Member Responsibilities</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Jeremy Thompson*</td>
+            <td>jmt2939</td>
+            <td><a href="http://github.com/mrjeremyt" target="_blank">mrjeremyt</a></td>
+            <td>Front-End dev, data collection, api-implementation, model usage and dev, tech report</td>
+          </tr>
+          <tr>
+            <td>Daniel Durbin*</td>
+            <td>majisto</td>
+            <td><a href="http://github.com/majisto" target="_blank">majisto</a></td>
+            <td>Database setup, data insertion, api-implementation, Front-End debugger, tech report</td>
+          </tr>
+          <tr>
+            <td>Ryan Brooks</td>
+            <td>Rbrooks</td>
+            <td><a href="http://github.com/TheBrooks" target="_blank">TheBrooks</a></td>
+            <td>Database modeling, api setup, search function, tech report</td>
+          </tr>
+          <tr>
+            <td>Thien Vo</td>
+            <td>thv92</td>
+            <td><a href="http://github.com/thv92" target="_blank">thv92</a></td>
+            <td>Front-End dev, tech report</td>
+          </tr>
+          <tr>
+            <td>Mikkel Kim</td>
+            <td>mck782</td>
+            <td><a href="http://github.com/MikkelKim" target="_blank">MikkelKim</a></td>
+            <td>Model creation, api setup, Front-End debugger, tech report</td>
+          </tr>
+          <tr>
+            <td>Tim Sherlock*</td>
+            <td>tsherloc</td>
+            <td><a href="http://github.com/tsherlock" target="_blank">tsherlock</a></td>
+            <td>Model creation, api setup, search function, tech report</td>
+          </tr>
+            <tr>
+              <th colspan="3" style="text-align:center;color:#505050;" >* members who were group leaders</th>
+          </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
