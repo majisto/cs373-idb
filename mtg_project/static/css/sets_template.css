@@ -1,0 +1,52 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+@media (max-width: 320px) {
+    .row{
+        margin-left: -18.91231%;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 361px) {
+    .row{
+        padding-left: 2%;
+        margin-left: -12.91231%;
+    }
+}
+
+
+@media (min-width: 546px) {
+    .row{
+        padding-left: 17%;
+
+    }
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .row{
+        padding-left: 1.87213%;
+
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .row{
+        padding-left: 13%;
+
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .row{
+        padding-left: 5%;
+
+    }
+
+
+}

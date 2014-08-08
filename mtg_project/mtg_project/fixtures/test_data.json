@@ -1,0 +1,51 @@
+[
+    {
+        "fields" : {
+            "card_ID": 378516,
+            "card_converted_cost": 5,
+            "card_flavor_text": "",
+            "card_loyalty": null,
+            "card_mana_cost": "{W}{U}{B}{R}{G}",
+            "card_name": "Chromanticore",
+            "card_power": 4.0,
+            "card_price": 1.69,
+            "card_rarity": "M",
+            "card_setID": 1,
+            "card_subtype": 1,
+            "card_text": "Bestow {2}{W}{U}{B}{R}{G} (If you cast this card for its bestow cost, its an Aura spell with enchant creature. It becomes a creature again if its not attached to a creature.) Flying, first strike, vigilance, trample, lifelink Enchanted creature gets +4/+4 and has flying, first strike, vigilance, trample, and lifelink.",
+            "card_toughness": 4.0,
+            "card_type": 1},
+
+        "model": "mtg_project.MagicCard",
+        "pk" : 1
+    },
+    {
+        "fields" : {
+            "set_ID": "BNG",
+            "set_details": "Born of the Gods is a small set with 165 cards. It was released on 2014-02-07.",
+            "set_name": "Born of the Gods",
+            "set_num_cards": 165,
+            "set_release_date": "2014-02-07",
+            "set_story": "No longer content to walk the planes of the Multiverse seeking pleasure, the planeswalker Xenagos returns to Theros to become the god of revels. The boundaries that separate everyday existence from Nyx are growing dangerously thin. Strange creatures of enchantment, called Nyxborn or Born of the Gods, are pouring into the mortal world as Xenagos threatens to disrupt the very nature of the plane. Mogis, the god of slaughter sends hordes of mortal and Nyxborn minotaurs against the human cities Akros, Meletis and Setessa. Elspeth Tirel leads an army of heroes to break the minotaur siege at Akros. The humans were victorious, but the victory celebration after the battle becomes the ultimate ritual to launch Xenagos into Nyx as a god. Elspeth is blamed for his ascension and driven away in disgrace."},
+
+        "model" : "mtg_project.MagicSet",
+        "pk" : 1
+    },
+    {
+        "fields" : {
+            "type_description": "Enchantment creatures were introduced on a futureshifted card in Future Sight: Lucent Liminid. They later reappeared as a fullfledged mechanic in the Theros set, where they represent the gods themselves , and their emissaries (creatures with bestow). The enchantment creatures were highlighted in the following set, which was named after them: Born of the Gods. These had all global enchantment effects.",
+            "type_name": "Enchant Creature",
+            "type_subtypes": []},
+
+        "model" : "mtg_project.MagicType",
+        "pk" : 1
+    },
+    {
+        "fields" : {
+            "subtype_name" : "Manticore"
+        },
+
+        "model" : "mtg_project.MagicSubtype",
+        "pk" : 1
+    }
+]

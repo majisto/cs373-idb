@@ -1,0 +1,16 @@
+body{
+  background:url("http://i57.tinypic.com/who2hf.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container{
+    opacity:.2;
+}
+
+.jumbotron{
+
+    opacity:.8;
+}

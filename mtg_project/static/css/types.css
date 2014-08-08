@@ -1,0 +1,17 @@
+@media (min-width:360px){
+    .row{
+        padding-left: 12%;
+    }
+}
+
+@media (min-width:980px) and (max-width: 1203px){
+    .row{
+        padding-left: 0%;
+    }
+}
+
+@media (min-width:1280px){
+    .row{
+        padding-left: 10%;
+    }
+}
