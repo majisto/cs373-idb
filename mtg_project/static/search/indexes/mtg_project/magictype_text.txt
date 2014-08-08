@@ -1,3 +1,0 @@
-{{ object.type_name }}
-{{ object.type_description }}
-{{ object.type_subtype_list }}
