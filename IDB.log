@@ -1,3 +1,210 @@
+commit 209f9f3285106ed3534737892545cbd1e01402f3
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Aug 8 19:30:05 2014 +0000
+
+    final commit
+
+commit 9675454d80d768b39b7dc19c2e130832e5c33fb1
+Merge: f163dd8 2a7932b
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Aug 8 19:28:04 2014 +0000
+
+    Merge branch 'master' of https://github.com/majisto/cs372-idb
+
+commit f163dd8ac41cfa9617b05db1483163f6c5afeefc
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Aug 8 19:27:38 2014 +0000
+
+    clear
+
+commit 2a7932be1ee1ec4781111fab1d2c2e3f5d7351cb
+Author: majisto <majisto@gmail.com>
+Date:   Thu Aug 7 20:39:23 2014 -0500
+
+    Adding new technical report.
+
+commit 1ef344752f7502d25ecd2cb25b663c701d97211c
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Aug 7 19:50:22 2014 +0000
+
+    adding files
+
+commit d05ae1abe90ba6d071f0fa98d32b6b31fe4498b3
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Aug 7 19:48:44 2014 +0000
+
+    deleting files
+
+commit 2bcb874f0f265b5f3ba92b0785b9c6396f68e912
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Aug 7 19:46:46 2014 +0000
+
+    test
+
+commit 3d182bd6e14379d54d2f1b5a05c741ffccf10089
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Aug 1 18:42:57 2014 +0000
+
+    added project back
+
+commit 5b9443b04907aa4f24980520585b2074a89fa8dd
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Aug 1 18:40:24 2014 +0000
+
+    remove project
+
+commit f6c64c738ac4c852957b20398a3ff436c133959b
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 30 17:53:11 2014 +0000
+
+    added clean mtg_project
+
+commit bf7ea66c881bb42a8add8c46f2b5df79e69cb566
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Wed Jul 30 17:50:41 2014 +0000
+
+    removing mtg
+
+commit 8ae6309823f1ff44c85e166ac6457afd2be296db
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 21:00:06 2014 +0000
+
+    Added models.html
+
+commit 08c57c2ebdad8ecd98fb5053cdf8dd25c1782f7a
+Author: majisto <majisto@gmail.com>
+Date:   Fri Jul 25 15:28:20 2014 -0500
+
+    Adding technical report.
+
+commit 047de42dd4f9509af12105cdcb910fc3916026af
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Fri Jul 25 13:06:52 2014 -0500
+
+    slight apiary fix
+
+commit 8f2687e9fb42035026386ee7ec2b6edfb31102b5
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Fri Jul 25 12:55:52 2014 -0500
+
+    added apiary
+
+commit c6991a499b6a5434b1890b768efa0bf1e37b5c97
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Fri Jul 25 12:53:30 2014 -0500
+
+    fixed test.out
+
+commit 5956c09c3bad0a8d857c55a6ee022d9fe5bcdbaf
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 17:47:25 2014 +0000
+
+    python anywhere files
+
+commit 28aa9f2a165937d52f808e5847e9343e3dfbc950
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 17:45:13 2014 +0000
+
+    clear
+
+commit 561dcb959be3ce21a2d4d69e555a760b4ac06408
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 01:17:41 2014 +0000
+
+    adding mtg_project from python anywhere
+
+commit cdc0956ad5b58bde6bb0540e005c6d021eba4c36
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 01:14:54 2014 +0000
+
+    file system clean up
+
+commit 5649c0d0ffb458e6d05a3ecd98c81a4bdc9136df
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 25 01:07:45 2014 +0000
+
+    fixing apiary
+
+commit 34b4b227bfba0cf4547f825fbad4e90cbb219746
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 24 14:34:55 2014 +0000
+
+    fixed basically all of the spacing problems with the card page. and fixed the cases where power/toughness should be a star
+
+commit 219084b06cd791b0e6757352a1d620d9bf5ac997
+Merge: 7096149 b5ca1b0
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 24 09:38:24 2014 +0000
+
+    Website front-end done for this iteration. closes #29 closes #30 closes #31 closes #32 closes #33 closes #34 closes #35 closes #36
+
+commit 709614957717719e2c8a33cbe2e357dbc83e4118
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 24 09:34:03 2014 +0000
+
+    Website front-end done for this iteration. closes #29 closes #30 closes #31 closes #32 closes #33 closes #34 closes #35 closes #36
+
+commit b5ca1b03f6fd66b3c6f8593da8aa58eaf64e12d1
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Wed Jul 23 22:03:59 2014 -0500
+
+    fixed apiary
+
+commit a9c494cf78934a6e239b3ced132861c0cc047c75
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Tue Jul 22 01:40:22 2014 +0000
+
+    Updated mtg_project with new django models.
+
+commit ee638ed9a2f455a102f314e3c3144a5ca6b8bb7c
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Tue Jul 22 01:39:14 2014 +0000
+
+    Removing mtg_project directory to re-copy.
+
+commit 935de629aae726fff27307397708694a850d1d6a
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 17 03:56:50 2014 +0000
+
+    This should have current mtg_project folder from python anywhere.
+
+commit 7d221af3ff307578e1a330d2a9248f37d251178b
+Merge: 83d91b4 559ce7a
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 17 03:54:27 2014 +0000
+
+    Merge branch 'master' of http://github.com/majisto/cs373-idb
+
+commit 83d91b4a6ebe459da98e6d305c51d4177a1e9fe6
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 17 03:54:08 2014 +0000
+
+    Pushing mtg project to github.
+
+commit 559ce7abd183c4a6e7985572ae00073b0c239f65
+Author: Timothy Sherlock <tsherloc@cs.utexas.edu>
+Date:   Wed Jul 16 22:42:23 2014 -0500
+
+    fixing mtg
+
+commit 2eac264eb36f6906463a7b81b20095240845c02c
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 17 03:07:13 2014 +0000
+
+    Deleting old files.
+
+commit 6e61946d6a32ef05f1b4c6daceb7399e6e0f3032
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Thu Jul 17 03:00:16 2014 +0000
+
+    mtg fix
+
+commit 0c65a274cd3704b9c33c58970a03c28a5770e45a
+Author: mrjeremyt <jthompson2214@gmail.com>
+Date:   Fri Jul 11 02:16:24 2014 +0000
+
+    Final commit.
+
 commit aa105449adccfcaf59858ae8b94f17fd1e6e460c
 Merge: 0939cbe dd6eed8
 Author: mrjeremyt <jthompson2214@gmail.com>
